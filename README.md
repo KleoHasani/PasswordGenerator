@@ -5,7 +5,7 @@ A simple password generator. Learning different PRNG's and implementing Test Dri
 git clone https://github.com/KleoHasani/PasswordGenerator.git
 ```
 ## Required
-
+Node v14.8.0
 ## Build With
 Node v14.8.0
 ## Version
