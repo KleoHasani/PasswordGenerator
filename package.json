@@ -1,0 +1,23 @@
+{
+  "name": "passwordgenerator",
+  "version": "1.0.0",
+  "description": "Self-contained password generator.",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "node .",
+    "start:dev": "nodemon",
+    "clean": "rm -rf ./node_modules",
+    "test": "jest"
+  },
+  "keywords": [
+    "Password",
+    "Generator",
+    "Safe"
+  ],
+  "author": "Kleo Hasani",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.5.2",
+    "nodemon": "^2.0.4"
+  }
+}
