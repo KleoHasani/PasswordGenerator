@@ -1,7 +1,7 @@
 {
   "name": "passwordgenerator",
   "version": "1.0.0",
-  "description": "Self-contained password generator.",
+  "description": "A simple password generator. Learning different PRNG's and implementing Test Driven Developement.",
   "main": "./src/main.js",
   "scripts": {
     "start": "node .",
