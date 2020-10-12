@@ -6,6 +6,7 @@ git clone https://github.com/KleoHasani/PasswordGenerator.git
 ```
 ## Required
 Node v14.8.0
+NPM v6.14.7
 ## Build With
 Node v14.8.0
 ## Version
