@@ -9,7 +9,7 @@ class DivideByZeroError extends Error {
 }
 
 // Linear Congruential Generator
-class LSG {
+class LCG {
   m_a = 48271;
   m_c = 0;
   m_m = 2147483647;
@@ -66,4 +66,4 @@ class LSG {
   }
 }
 
-module.exports = { LSG, DivideByZeroError };
+module.exports = { LCG, DivideByZeroError };

@@ -1,18 +1,18 @@
-const { LSG, DivideByZeroError } = require("../src/PRNGs");
+const { LCG, DivideByZeroError } = require("../src/PRNGs");
 
-describe("PRNG -lsg", () => {
+describe("PRNG -lcg", () => {
   it("Should throw a DivideByZeroError on m = 0", () => {
     function DivOrModByZero() {
-      const lsg = new LSG();
-      lsg.setM = 0;
-      lsg.next;
+      const lcg = new LCG();
+      lcg.setM = 0;
+      lcg.next;
     }
     expect(DivOrModByZero).toThrowError(DivideByZeroError);
   });
 
   it("Should return a number", () => {
-    const lsg = new LSG();
-    const n = lsg.next;
+    const lcg = new LCG();
+    const n = lcg.next;
     expect(typeof n).toBe("number");
     expect(typeof n).not.toBeNaN();
   });

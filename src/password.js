@@ -4,7 +4,7 @@ const {
   generateUppercase,
   generateLowercase,
 } = require("./generator");
-const { LSG } = require("./PRNGs");
+const { LCG } = require("./PRNGs");
 
 // Pool options available
 const pool = {
@@ -22,19 +22,19 @@ function generatePassword(
     start: null,
   }
 ) {
-  const lsg = new LSG();
+  const lcg = new LCG();
 
   const password = [];
 
   let i = 0;
   if (options.start) {
     i = 1;
-    password.push(options.start(lsg.nextF));
+    password.push(options.start(lcg.nextF));
   }
 
   for (i; i < options.size; i++) {
     const choice = Math.round(Math.random() * (options.pools.length - 1));
-    password.push(options.pools[choice](lsg.nextF));
+    password.push(options.pools[choice](lcg.nextF));
   }
   return password;
 }

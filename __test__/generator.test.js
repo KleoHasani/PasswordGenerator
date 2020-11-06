@@ -1,20 +1,19 @@
 const {
-  generateRandomNumbers,
   generateNumber,
   generateSymbol,
   generateUppercase,
   generateLowercase,
 } = require("../src/generator");
-const { LSG } = require("../src/PRNGs");
+const { LCG } = require("../src/PRNGs");
 
 const size = 10000;
-const lsg = new LSG();
+const lcg = new LCG();
 
 describe("GENERATOR -number", () => {
   it("Should make array with 10000 numbers from 0 to 9", () => {
     const arr = [];
     for (let i = 0; i < size; i++) {
-      arr.push(generateNumber(lsg.nextF));
+      arr.push(generateNumber(lcg.nextF));
     }
     expect(typeof arr).toBe("object");
     expect(arr.length).toEqual(size);
@@ -31,7 +30,7 @@ describe("GENERATOR -symbol", () => {
   it("Should make array with 10000 symbols from ASCII values 33 to 38", () => {
     const arr = [];
     for (let i = 0; i < 10000; i++) {
-      arr.push(generateSymbol(lsg.nextF));
+      arr.push(generateSymbol(lcg.nextF));
     }
     expect(typeof arr).toBe("object");
     expect(arr.length).toEqual(size);
@@ -48,7 +47,7 @@ describe("GENERATOR -uppercase", () => {
   it("Should make array with 10000 uppercase from ASCII value 65 to 90", () => {
     const arr = [];
     for (let i = 0; i < 10000; i++) {
-      arr.push(generateUppercase(lsg.nextF));
+      arr.push(generateUppercase(lcg.nextF));
     }
     expect(typeof arr).toBe("object");
     expect(arr.length).toEqual(size);
@@ -65,7 +64,7 @@ describe("GENERATOR -lowercase", () => {
   it("Should make array with 10000 lowercase from ASCII value 97 to 122", () => {
     const arr = [];
     for (let i = 0; i < 10000; i++) {
-      arr.push(generateLowercase(lsg.nextF));
+      arr.push(generateLowercase(lcg.nextF));
     }
     expect(typeof arr).toBe("object");
     expect(arr.length).toEqual(size);
